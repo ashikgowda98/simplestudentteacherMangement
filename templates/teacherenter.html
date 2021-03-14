@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+
+<h2>STUDENT MARKS</h2>
+<button><a href="{{ url_for('teacherlogin') }}">logout</a></button>
+<table>
+  <form action="update">
+  <tr>
+    <th>USN</th>
+    <th>SEM1</th>
+    <th>SEM2</th>
+    <th>SEM3</th>
+    <th>SEM4</th>
+    <th>SEM5</th>
+    <th>SEM6</th>
+    <th>SEM7</th>
+    <th>SEM8</th>
+  </tr>
+  {% for row in data %}
+  <tr>
+    <td>{{ row.0 }}</td>
+    <td>{{ row.1 }}</td>
+    <td>{{ row.2 }}</td>
+    <td>{{ row.3 }}</td>
+    <td>{{ row.4 }}</td>
+    <td>{{ row.5 }}</td>
+    <td>{{ row.6}}</td>
+    <td>{{ row.7 }}</td>
+    <td>{{ row.8 }}</td>
+    <td><button><a href="/update/{{ row.0 }}" class="btn btn-success">update</a>
+    </button></td>
+    <td><button><a href="/delete/{{ row.0 }}" class="btn btn-success" onclick="return confirm('Are You Sure to Delete ?')">Delete</a></button></td>
+  </tr>
+  {% endfor %}
+</form>
+</table>
+</body>
+</html>

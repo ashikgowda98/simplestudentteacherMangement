@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>STUDENT INFORMATION</h2>
+
+<table>
+  <tr>
+    <th>USN</th>
+    <th>NAME</th>
+    <th>DOB</th>
+    <th>EMAIL</th>
+    <th>PHONE</th>
+    <th>ADDRESS</th>
+    
+  </tr>
+  {% for row in data1 %}
+  <tr>
+    <td>{{ row.0 }}</td>
+    <td>{{ row.1 }}</td>
+    <td>{{ row.2 }}</td>
+    <td>{{ row.3 }}</td>
+    <td>{{ row.4 }}</td>
+    <td>{{ row.5 }}</td>
+    
+   
+  </tr>
+  {% endfor %}
+</table>
+
+<h2>STUDENT MARKS</h2>
+
+<table>
+  <tr>
+    <th>USN</th>
+    <th>SEM1</th>
+    <th>SEM2</th>
+    <th>SEM3</th>
+    <th>SEM4</th>
+    <th>SEM5</th>
+    <th>SEM6</th>
+    <th>SEM7</th>
+    <th>SEM8</th>
+  </tr>
+  {% for row in data %}
+  <tr>
+    <td>{{ row.0 }}</td>
+    <td>{{ row.1 }}</td>
+    <td>{{ row.2 }}</td>
+    <td>{{ row.3 }}</td>
+    <td>{{ row.4 }}</td>
+    <td>{{ row.5 }}</td>
+    <td>{{ row.6}}</td>
+    <td>{{ row.7 }}</td>
+    <td>{{ row.8 }}</td>
+    
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>

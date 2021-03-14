@@ -1,0 +1,8 @@
+body{
+	background-image: url("mce.jpg");
+ 	
+	background-repeat:no-repeat;
+	height: 160vh;
+	background-size: cover;
+	background-position:center;
+}

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h1>Login</h1>
+  {% if error %}
+    <p class=error><strong>Error:</strong> {{ error }}
+  {% endif %}
+  <form action="/studentlogin" method=post>
+    <dl>
+      <dt>USN:
+      <dd><input type="text" name="USN" id='USN'>
+    </dl>
+    <p><input type=submit value=login>
+  </form>
+{% endblock %}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+
+<h2>update</h2>
+
+<table>
+  <form action="/update" method=post>
+    {% for row in data %}
+    <dl>
+      <dt>USN:
+      <dd><input type="text" name="usn" value="{{row.0}}">
+      <dt>SEM1:
+      <dd><input type="real" name="sem1" value="{{row.1}}">
+      <dt>SEM2:
+      <dd><input type="real" name="sem2" value="{{row.2}}">
+      <dt>SEM3:
+      <dd><input type="real" name="sem3" value="{{row.3}}">
+      <dt>SEM4:
+      <dd><input type="real" name="sem4" value="{{row.4}}">
+      <dt>SEM5:
+      <dd><input type="real" name="sem5" value="{{row.5}}">
+      <dt>SEM6:
+      <dd><input type="real" name="sem6" value="{{row.6}}">
+      <dt>SEM7:
+      <dd><input type="real" name="sem7" value="{{row.7}}">
+      <dt>SEM8:
+      <dd><input type="real" name="sem8" value="{{row.8}}">
+    </dl>
+    {% endfor %}
+    
+     
+    <p><input type=submit value=Update>
+  </form>
+</table>
+</body>
+</html>

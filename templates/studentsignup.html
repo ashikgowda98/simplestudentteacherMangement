@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h1>Sign up</h1>
+  {% if error %}
+    <p class=error><strong>Error:</strong> {{ error }}
+  {% endif %}
+  <form method=post>
+    <dl>
+      <dt>USN:
+      <dd><input type="text" name="USN" id='USN'>
+      <dt>NAME:
+      <dd><input type="text" name="NAME" id="NAME">
+      <dt>DOB:
+      <dd><input type="date" name="DOB" id='DOB'>
+      <dt>EMAIL:
+      <dd><input type="email" name="EMAIL" id="EMAIL">
+      <dt>PHONE NUMBER:
+      <dd><input type="text" name="PHONE" id='PHONE'>
+      <dt>ADDRESS:
+      <dd><input type="text" name="ADDRESS" id="ADDRESS">
+    </dl>
+    <p><input type=submit value=Sign-up>
+  </form>
+{% endblock %}
